@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Séance 05, exercice 02</h1>
+        <p>Séance du 17 octobre, 2023</p>
+    
+        <h2>Consignes</h2>
+    
+        <p>
+            À partir des outils présentés dans la séance 5 (cf. 
+            <a href="https://app.milanote.com/1QSquq1Lv01Fb9/53-outils-de-visualisation-en-ligne-datawrapper-tableau-carto-plotly-chart-studio?p=PuXU0kfU509">note 5.3</a>), 
+            réalisez un graphique, insérez-le dans un document HTML et publiez-le dans votre espace GitHub.
+        </p>
+    
+        <p>Pour faire ce graphique j'ai choisi l'outil <a href="https://www.tableau.com/products/public">Tableau Public</a>.</p>
+        <p>J'ai utilisé les données obtenues sur WikiData lors de la séance 03.</p>
+        <p>Les données sont disponibles sur le 
+            <a href="https://docs.google.com/spreadsheets/d/1vAnr5NYaw_1uUI2sY5KRSZtG28iPlfuskrbBXtfHUfg/edit?usp=sharing">Google Sheet partagé</a> 
+            -> onglet "population".</p>
+        <div
+            class='tableauPlaceholder'
+            id='viz1697641421830'
+            style='position: relative'>
+            <noscript>
+                <a href='#'><img
+                    alt='Population des villes - source Wikidata '
+                    src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;po&#47;pop_villes&#47;Sheet1&#47;1_rss.png'
+                    style='border: none'/></a>
+            </noscript>
+            <object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
+                <param name='embed_code_version' value='3'/>
+                <param name='site_root' value=''/><param name='name' value='pop_villes&#47;Sheet1'/><param name='tabs' value='no'/><param name='toolbar' value='yes'/><param
+                    name='static_image'
+                    value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;po&#47;pop_villes&#47;Sheet1&#47;1.png'/>
+                <param name='animate_transition' value='yes'/><param name='display_static_image' value='yes'/><param name='display_spinner' value='yes'/><param name='display_overlay' value='yes'/><param name='display_count' value='yes'/><param name='language' value='en-US'/></object>
+        </div>
+        <script type='text/javascript'>
+            var divElement = document.getElementById('viz1697641421830');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width = '100%';
+            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement
+                .parentNode
+                .insertBefore(scriptElement, vizElement);
+        </script>
+    </body>
+</html>
