@@ -6,60 +6,52 @@
     <title>CSV Data Visualization</title>
 </head>
 <body>
-    <canvas id="myCanvas" width="800" height="400" style="border:1px solid #000;"></canvas>
+    <h1>CSV Data Visualization</h1>
+
+    <canvas id="canvas" width="800" height="400" style="border:1px solid #000;"></canvas>
 
     <script>
-        // Function to draw a horizontal black line on the canvas
-        function drawHorizontalLine(context, y) {
+        // Function to draw a horizontal line on the canvas
+        function drawLine(context, y) {
             context.beginPath();
             context.moveTo(0, y);
-            context.lineTo(canvas.width, y);
-            context.strokeStyle = "#000000";
+            context.lineTo(800, y); // Assuming canvas width is 800, adjust if necessary
+            context.strokeStyle = '#000'; // Black color
             context.stroke();
         }
 
-        // Function to read and process CSV data
-        function processCSVData(csvData) {
-            // Split CSV rows
-            const rows = csvData.split('\n');
+        // Function to read and visualize CSV data
+        function visualizeCSVData(data) {
+            var canvas = document.getElementById('canvas');
+            var context = canvas.getContext('2d');
 
-            // Get canvas and context
-            const canvas = document.getElementById("myCanvas");
-            const context = canvas.getContext("2d");
+            // Assuming the CSV has a header and the artiste column is present
+            var rows = data.split('\n');
+            for (var i = 1; i < rows.length; i++) { // Start from 1 to skip the header
+                var columns = rows[i].split(',');
+                var artiste = columns[1].trim(); // Assuming artiste is in the second column, adjust if necessary
+                var yPos = i * 20; // Adjust the spacing as needed
 
-            // Loop through rows and draw lines based on "artiste" column
-            for (let i = 1; i < rows.length; i++) {
-                const columns = rows[i].split(',');
-                const artiste = columns[1].trim(); // Assuming "artiste" is in the second column (index 1)
-
-                // Calculate y-coordinate based on row index
-                const y = i * 20;
-
-                // Draw a horizontal line for each artiste
-                drawHorizontalLine(context, y);
+                drawLine(context, yPos);
             }
         }
 
         // Function to load CSV file
-        function loadCSVFile(file) {
-            const xhr = new XMLHttpRequest();
+        function loadCSVFile() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'data.csv', true);
             xhr.onreadystatechange = function() {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    if (xhr.status === 200) {
-                        // CSV data successfully loaded
-                        processCSVData(xhr.responseText);
-                    } else {
-                        console.error("Failed to load CSV file");
-                    }
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var csvData = xhr.responseText;
+                    visualizeCSVData(csvData);
                 }
             };
-            xhr.open("GET", file, true);
             xhr.send();
         }
 
-        // Load CSV file on page load
+        // Load CSV file when the page is loaded
         window.onload = function() {
-            loadCSVFile("data.csv"); // Replace with the actual path to your CSV file
+            loadCSVFile();
         };
     </script>
 </body>
