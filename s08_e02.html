@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Data Visualization</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="800" height="400" style="border:1px solid #000;"></canvas>
+
+    <script>
+        // Function to draw a horizontal black line on the canvas
+        function drawHorizontalLine(context, y) {
+            context.beginPath();
+            context.moveTo(0, y);
+            context.lineTo(canvas.width, y);
+            context.strokeStyle = "#000000";
+            context.stroke();
+        }
+
+        // Function to read and process CSV data
+        function processCSVData(csvData) {
+            // Split CSV rows
+            const rows = csvData.split('\n');
+
+            // Get canvas and context
+            const canvas = document.getElementById("myCanvas");
+            const context = canvas.getContext("2d");
+
+            // Loop through rows and draw lines based on "artiste" column
+            for (let i = 1; i < rows.length; i++) {
+                const columns = rows[i].split(',');
+                const artiste = columns[1].trim(); // Assuming "artiste" is in the second column (index 1)
+
+                // Calculate y-coordinate based on row index
+                const y = i * 20;
+
+                // Draw a horizontal line for each artiste
+                drawHorizontalLine(context, y);
+            }
+        }
+
+        // Function to load CSV file
+        function loadCSVFile(file) {
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        // CSV data successfully loaded
+                        processCSVData(xhr.responseText);
+                    } else {
+                        console.error("Failed to load CSV file");
+                    }
+                }
+            };
+            xhr.open("GET", file, true);
+            xhr.send();
+        }
+
+        // Load CSV file on page load
+        window.onload = function() {
+            loadCSVFile("data.csv"); // Replace with the actual path to your CSV file
+        };
+    </script>
+</body>
+</html>
