@@ -7,6 +7,7 @@
 </head>
 <body>
     <script>
+        var canvas;
         // Function to draw a circle with a black border
         function drawCircle(context, radius) {
             context.beginPath();
@@ -22,7 +23,7 @@
             const rows = csvData.split('\n');
 
             // Get the canvas element
-            const canvas = document.createElement('canvas');
+            canvas = document.createElement('canvas');
             canvas.width = 500; // Adjust the canvas size as needed
             canvas.height = 500;
             document.body.appendChild(canvas);
