@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Drawing</title>
+</head>
+<body>
+    <script>
+        // Function to draw a circle with a black border
+        function drawCircle(context, radius) {
+            context.beginPath();
+            context.arc(canvas.width / 2, canvas.height / 2, radius, 0, 2 * Math.PI);
+            context.strokeStyle = 'black';
+            context.lineWidth = 2;
+            context.stroke();
+        }
+
+        // Function to read and process CSV data
+        function processData(csvData) {
+            // Split CSV data into rows
+            const rows = csvData.split('\n');
+
+            // Get the canvas element
+            const canvas = document.createElement('canvas');
+            canvas.width = 500; // Adjust the canvas size as needed
+            canvas.height = 500;
+            document.body.appendChild(canvas);
+
+            // Get the 2D drawing context
+            const context = canvas.getContext('2d');
+
+            // Draw circles for each row in the "artiste" column
+            for (let i = 0; i < rows.length; i++) {
+                const columns = rows[i].split(',');
+                const artiste = columns[0].trim(); // Assuming the artiste column is the first column
+
+                // Increase circle size progressively for each row
+                const radius = 10 + i * 10;
+
+                // Draw the circle
+                drawCircle(context, radius);
+            }
+        }
+
+        // Function to load CSV file
+        function loadCSVFile() {
+            const xmlhttp = new XMLHttpRequest();
+            const url = 'data.csv'; // Change this if your CSV file has a different name or path
+
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    // Once the CSV file is loaded, process the data
+                    processData(xmlhttp.responseText);
+                }
+            };
+
+            // Open and send a GET request to the CSV file
+            xmlhttp.open('GET', url, true);
+            xmlhttp.send();
+        }
+
+        // Call the function to load and process the CSV file
+        loadCSVFile();
+    </script>
+</body>
+</html>
