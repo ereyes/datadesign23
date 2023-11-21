@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spotify json</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $('document').ready(function(){
+            $('#page').text('Hello CEN');
+
+            $.getJSON("spotify.json", function(data){
+                $.each(data, function(i, d){
+                    $('#page').append('<div>' + d.TrackName + ' de ' + d.artiste + '</div>');
+                });
+            });
+        });
+
+
+    </script>
+</head>
+<body>
+    <div id="page"></div>
+</body>
+</html>
