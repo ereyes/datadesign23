@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js canvas - geometry - birds</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				color: #808080;
+				font-family:Monospace;
+				font-size:13px;
+				text-align:center;
+
+				background-color: #ffffff;
+				margin: 0px;
+				overflow: hidden;
+			}
+			#oiseaux {
+				border: 1px solid gray;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="container"></div>
+		<div>Démo Oiseaux</div>
+
+		<script src="three.js"></script>
+		<script src="Projector.js"></script>
+		<script src="CanvasRenderer.js"></script>
+		<script src="stats.min.js"></script>
+		<script src="Bird.js"></script>
+		<script src="boid.js"></script>
+
+		<div id="oiseaux">
+			<script src="showBirds.js"></script>
+			<!-- 
+				Le fichier showBirds.js permet de modifier :
+				
+				la largeur = var SCREEN_WIDTH = window.innerWidth, 
+				la hauteur = SCREEN_HEIGHT = 100,
+				la position à partir de la gauche = SCREEN_WIDTH_HALF = SCREEN_WIDTH  / 2,
+				la position à partir du haut = SCREEN_HEIGHT_HALF = SCREEN_HEIGHT / 2; 
+				couleur de fond = scene.background = new THREE.Color( 0xeeeeee );
+			-->
+		</div>
+
+	</body>
+</html>
