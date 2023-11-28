@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<style>
+body {
+	margin:2em;
+	background-color:#eee;
+}
+#sigma-container { 
+	width:800px; height:700px;
+	margin-left:250px; margin-top:40px;
+	position:absolute;
+	top:0; right:0; bottom:0; left:0;
+	background-color:white;
+}
+
+#info{
+	width:200px;
+	position:fixed;
+	top:0; right:0; bottom:0; left:0;
+	padding:1em;
+	font-family:Arial;
+	font-size:80%;
+}
+</style>
+</head>
+
+<body>
+<div id="info">
+    <h1>Pitt - The Rock</h1>
+    <p><em>Carte interactive du réseau de personnages</em></p>
+    <hr>
+    <p>Instructions :</p>
+    <p>Zoomer avec la souris</p>
+    <p>Cliquez un noed pour sélectionner son réseau</p>
+    <p>Cliquez sur la partie blanche pour désélectionner</p>
+    <p>
+    	Afficher une carte de grande taille avec les type de relations <br><br>
+    	<a href="got-reseau.png"><img src="got-reseau.png" width="200"></a>
+    </p>
+</div>
+
+<div id="sigma-container"></div>
+
+
+<script src="sigmajs-v1.0.3/sigma.min.js"></script>
+<script src="sigmajs-v1.0.3/plugins/sigma.parsers.gexf.min.js"></script>
+<script src="sigmajs-v1.0.3/plugins/sigma.canvas.edges.labels.def.js"></script>
+
+<script>
+  // Add a method to the graph model that returns an
+  // object with every neighbors of a node inside:
+  sigma.classes.graph.addMethod('neighbors', function(nodeId) {
+    var k,
+        neighbors = {},
+        index = this.allNeighborsIndex[nodeId] || {};
+
+    for (k in index)
+      neighbors[k] = this.nodesIndex[k];
+
+    return neighbors;
+  });
+
+  sigma.parsers.gexf(
+    'rock-pitt.gexf',
+    {
+      container: 'sigma-container'
+    },
+    function(s) {
+      // We first need to save the original colors of our
+      // nodes and edges, like this:
+      s.graph.nodes().forEach(function(n) {
+        n.originalColor = n.color;
+      });
+      s.graph.edges().forEach(function(e) {
+        e.originalColor = e.color;
+      });
+
+      // When a node is clicked, we check for each node
+      // if it is a neighbor of the clicked one. If not,
+      // we set its color as grey, and else, it takes its
+      // original color.
+      // We do the same for the edges, and we only keep
+      // edges that have both extremities colored.
+      s.bind('clickNode', function(e) {
+        var nodeId = e.data.node.id,
+            toKeep = s.graph.neighbors(nodeId);
+        toKeep[nodeId] = e.data.node;
+
+        s.graph.nodes().forEach(function(n) {
+          if (toKeep[n.id])
+            n.color = n.originalColor;
+          else
+            n.color = '#eee';
+        });
+
+        s.graph.edges().forEach(function(e) {
+          if (toKeep[e.source] && toKeep[e.target])
+            e.color = e.originalColor;
+          else
+            e.color = '#eee';
+        });
+
+        // Since the data has been modified, we need to
+        // call the refresh method to make the colors
+        // update effective.
+        s.refresh();
+      });
+
+      // When the stage is clicked, we just color each
+      // node and edge with its original color.
+      s.bind('clickStage', function(e) {
+        s.graph.nodes().forEach(function(n) {
+          n.color = n.originalColor;
+        });
+
+        s.graph.edges().forEach(function(e) {
+          e.color = e.originalColor;
+        });
+
+        // Same as in the previous event:
+        s.refresh();
+      });
+    }
+  );
+</script>
+
+
+</body>
+</html>
