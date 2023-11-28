@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Rappeurs - ligne de temps</title>
+
+  <meta name="example-screenshot-selector" content="body" />
+  <meta charset="utf-8">
+
+  <style type="text/css">
+    body, html {
+      font-family: 'Arial Narrow Bold', sans-serif;
+      font-size: 0.7em;
+      background-color: #fff;
+      padding: 1em;
+    }
+
+    h1 {
+      color:chocolate;
+    }
+
+    #visualization {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+</style>
+
+  <!-- Load jquery for ajax support -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="vis-timeline-graph2d.min.js"></script>
+  <link href="vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<h1>
+  Rappeurs
+</h1>
+<p>Exemple fait avec <strong>vis-timeline</strong> : <a href="https://visjs.github.io/vis-timeline/docs/timeline/">https://visjs.github.io/vis-timeline/docs/timeline/</a></p>
+<p>Exemples : <a href="https://visjs.github.io/vis-timeline/examples/timeline/">https://visjs.github.io/vis-timeline/examples/timeline/</a></p>
+<div id="visualization"></div>
+<div id="loading">loading...</div>
+
+<script type="text/javascript">
+  // load data via an ajax request. When the data is in, load the timeline
+  $.ajax({
+    url: 'rappeurs.json',
+    success: function (data) {
+      // hide the "loading..." message
+      document.getElementById('loading').style.display = 'none';
+
+      // DOM element where the Timeline will be attached
+      var container = document.getElementById('visualization');
+
+      // Create a DataSet (allows two way data-binding)
+      var items = new vis.DataSet(data);
+
+      // Configuration for the Timeline
+      var options = {
+        showWeekScale:true,
+        dataAttributes:"all",
+        orientation:"top",
+        start:"1980-01-01"
+      };
+
+      // Create a Timeline
+      var timeline = new vis.Timeline(container, items, options);
+    },
+    error: function (err) {
+      console.log('Error', err);
+      if (err.status === 0) {
+        alert('Failed to load json');
+      }
+      else {
+        alert('Failed to load json.');
+      }
+    }
+  });
+</script>
+</body>
+</html>

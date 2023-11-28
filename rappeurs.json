@@ -1,0 +1,500 @@
+[
+  {
+    "id": 1,
+    "content": "Rapper",
+    "start": "1987-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 2,
+    "content": "10KDunkin",
+    "start": "2017-01-01",
+    "end": "2022-12-01"
+  },
+  {
+    "id": 3,
+    "content": "12 Gauge",
+    "start": "1994-01-01",
+    "end": "1995-12-01"
+  },
+  {
+    "id": 4,
+    "content": "1504 Mutebaby",
+    "start": "2021-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 5,
+    "content": "2 Chainz",
+    "start": "2007-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 6,
+    "content": "21 Lil Harold",
+    "start": "2020-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 7,
+    "content": "21 Savage",
+    "start": "2015-01-01",
+    "end": "2022-12-01"
+  },
+  {
+    "id": 8,
+    "content": "2Feet Bino2019",
+    "start": "2021-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 9,
+    "content": "4L Quan",
+    "start": "2023-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 10,
+    "content": "645AR",
+    "start": "2017-01-01",
+    "end": "2022-12-01"
+  },
+  {
+    "id": 11,
+    "content": "6lack",
+    "start": "2016-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 12,
+    "content": "Alley Boy",
+    "start": "2011-01-01",
+    "end": "2019-12-01"
+  },
+  {
+    "id": 13,
+    "content": "André 3000",
+    "start": "2003-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 14,
+    "content": "Atl Smook",
+    "start": "2016-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 15,
+    "content": "B.o.B.",
+    "start": "2007-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 16,
+    "content": "Baby D",
+    "start": "1996-01-01",
+    "end": "2008-12-01"
+  },
+  {
+    "id": 17,
+    "content": "BabyDrill",
+    "start": "2022-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 18,
+    "content": "Baby Tate",
+    "start": "2015-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 19,
+    "content": "Bankroll Fresh",
+    "start": "2012-01-01",
+    "end": "2020-12-01"
+  },
+  {
+    "id": 20,
+    "content": "Bermuda Yae",
+    "start": "2019-01-01",
+    "end": "2021-12-01"
+  },
+  {
+    "id": 21,
+    "content": "Big Gipp",
+    "start": "2003-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 22,
+    "content": "Bktherula",
+    "start": "2020-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 23,
+    "content": "Big Boi",
+    "start": "2003-01-01",
+    "end": "2021-12-01"
+  },
+  {
+    "id": 24,
+    "content": "Bslime",
+    "start": "2019-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 25,
+    "content": "CashCache!",
+    "start": "2020-01-01",
+    "end": "2021-12-01"
+  },
+  {
+    "id": 26,
+    "content": "Cee-Lo Green",
+    "start": "2002-01-01",
+    "end": "2020-12-01"
+  },
+  {
+    "id": 27,
+    "content": "CEO Trayle",
+    "start": "2016-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 28,
+    "content": "Destroy Lonely",
+    "start": "2017-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 29,
+    "content": "Digital Nas",
+    "start": "2016-01-01",
+    "end": "2022-12-01"
+  },
+  {
+    "id": 30,
+    "content": "Duwap Kaine",
+    "start": "2012-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 31,
+    "content": "Future",
+    "start": "2010-01-01",
+    "end": "2022-12-01"
+  },
+  {
+    "id": 32,
+    "content": "Goodie Mob",
+    "start": "1995-01-01",
+    "end": "2020-12-01"
+  },
+  {
+    "id": 33,
+    "content": "Guap Tarantino",
+    "start": "2016-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 34,
+    "content": "Gucci Mane",
+    "start": "2001-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 35,
+    "content": "Gunna",
+    "start": "2013-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 36,
+    "content": "Homixide Gang",
+    "start": "2021-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 37,
+    "content": "ILoveMakonnen",
+    "start": "2013-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 38,
+    "content": "Jeezy",
+    "start": "2001-01-01",
+    "end": "2022-12-01"
+  },
+  {
+    "id": 39,
+    "content": "JiD",
+    "start": "2010-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 40,
+    "content": "K$upreme",
+    "start": "2016-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 41,
+    "content": "Ken Carson",
+    "start": "2020-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 42,
+    "content": "Killer Mike",
+    "start": "2003-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 43,
+    "content": "Latto",
+    "start": "2016-01-01",
+    "end": "2022-12-01"
+  },
+  {
+    "id": 44,
+    "content": "Lil Baby",
+    "start": "2017-01-01",
+    "end": "2022-12-01"
+  },
+  {
+    "id": 45,
+    "content": "Lil Duke",
+    "start": "2017-01-01",
+    "end": "2021-12-01"
+  },
+  {
+    "id": 46,
+    "content": "Lil Gnar",
+    "start": "2018-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 47,
+    "content": "Lil Gotit",
+    "start": "2028-01-01",
+    "end": "2022-12-01"
+  },
+  {
+    "id": 48,
+    "content": "Lil Jon",
+    "start": "2006-01-01",
+    "end": "2016-12-01"
+  },
+  {
+    "id": 49,
+    "content": "Lil Keed",
+    "start": "2018-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 50,
+    "content": "Lil Yachty",
+    "start": "2015-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 51,
+    "content": "Ludacris",
+    "start": "1999-01-01",
+    "end": "2015-12-01"
+  },
+  {
+    "id": 52,
+    "content": "MadeinTYO",
+    "start": "2016-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 53,
+    "content": "Mango Foo",
+    "start": "2016-01-01",
+    "end": "2022-12-01"
+  },
+  {
+    "id": 54,
+    "content": "Marlo",
+    "start": "2017-01-01",
+    "end": "2020-12-01"
+  },
+  {
+    "id": 55,
+    "content": "MC Shy D",
+    "start": "1987-01-01",
+    "end": "1988-12-01"
+  },
+  {
+    "id": 56,
+    "content": "Metro Boomin",
+    "start": "2013-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 57,
+    "content": "MexikoDro",
+    "start": "2018-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 58,
+    "content": "Migos",
+    "start": "2011-01-01",
+    "end": "2021-12-01"
+  },
+  {
+    "id": 59,
+    "content": "Offset",
+    "start": "2019-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 60,
+    "content": "OJ da Juiceman",
+    "start": "2008-01-01",
+    "end": "2021-12-01"
+  },
+  {
+    "id": 61,
+    "content": "Outkast",
+    "start": "1994-01-01",
+    "end": "2003-12-01"
+  },
+  {
+    "id": 62,
+    "content": "Peewee Longway",
+    "start": "2013-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 63,
+    "content": "Pi'erre Bourne",
+    "start": "2010-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 64,
+    "content": "Playboi Carti",
+    "start": "2016-01-01",
+    "end": "2020-12-01"
+  },
+  {
+    "id": 65,
+    "content": "Quavo",
+    "start": "2017-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 66,
+    "content": "Rae Sremmurd",
+    "start": "2015-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 67,
+    "content": "Rich Homie Quan",
+    "start": "2012-01-01",
+    "end": "2022-12-01"
+  },
+  {
+    "id": 68,
+    "content": "Rich the Kid",
+    "start": "2010-01-01",
+    "end": "2021-12-01"
+  },
+  {
+    "id": 69,
+    "content": "SahBabii",
+    "start": "2012-01-01",
+    "end": "2022-12-01"
+  },
+  {
+    "id": 70,
+    "content": "Slimesito",
+    "start": "2017-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 71,
+    "content": "Soulja Boy",
+    "start": "2007-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 72,
+    "content": "T.I.",
+    "start": "2001-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 73,
+    "content": "Takeoff",
+    "start": "2018-01-01",
+    "end": "2022-12-01"
+  },
+  {
+    "id": 74,
+    "content": "Thouxanbanfauani",
+    "start": "2015-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 75,
+    "content": "Tony Shhnow",
+    "start": "2017-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 76,
+    "content": "UnoTheActivist",
+    "start": "2013-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 77,
+    "content": "Waka Flocka Flame",
+    "start": "2009-01-01",
+    "end": "2020-12-01"
+  },
+  {
+    "id": 78,
+    "content": "Warhol.SS",
+    "start": "2015-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 79,
+    "content": "Yak Gotti",
+    "start": "2015-01-01",
+    "end": "2020-12-01"
+  },
+  {
+    "id": 80,
+    "content": "Young Nudy",
+    "start": "2015-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 81,
+    "content": "Young Scooter",
+    "start": "2011-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 82,
+    "content": "Young Thug",
+    "start": "2011-01-01",
+    "end": "2023-12-01"
+  },
+  {
+    "id": 83,
+    "content": "Yung Bans",
+    "start": "2017-01-01",
+    "end": "2019-12-01"
+  }
+]
